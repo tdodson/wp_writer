@@ -1,0 +1,18 @@
+{
+  "name": "underscores_sass",
+  "version": "1.0.0",
+  "description": "A sassy underscores_based theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "grunt",
+    "autoprefixer",
+    "underscores",
+    "wordpress"
+  ],
+  "author": "Thomas Dodson",
+  "license": "ISC"
+}
