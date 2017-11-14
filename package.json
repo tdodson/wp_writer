@@ -14,5 +14,8 @@
     "wordpress"
   ],
   "author": "Thomas Dodson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  }
 }
