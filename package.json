@@ -16,6 +16,7 @@
   "author": "Thomas Dodson",
   "license": "ISC",
   "dependencies": {
+    "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0"
   },
   "devDependencies": {
