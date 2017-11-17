@@ -1,7 +1,7 @@
 /**
  * File navigation.js.
  *
- * Handles toggling the navigation menu for small screens and enables TAB key
+ * Handles toggling th e navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
 ( function() {
