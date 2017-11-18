@@ -117,6 +117,10 @@ add_action( 'widgets_init', 'underscores_sass_widgets_init' );
  * Enqueue scripts and styles.
  */
 function underscores_sass_scripts() {
+	// Enqueue Google fonts.
+
+	wp_enqueue_style ( 'underscores_sass_fonts', 'https://fonts.googleapis.com/css?family=Lusitana:400,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i' );
+
 	wp_enqueue_style( 'underscores_sass-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'underscores_sass-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
