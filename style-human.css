@@ -3,7 +3,7 @@ Theme Name: Sassy Underscores
 Theme URI: http://underscores.me/
 Author: Thomas Dodson
 Author URI: http://techneblog.com
-Description: Sassy Underscores-based theme
+Description: Theme for a responsive, typography-focused writer's site.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -265,14 +265,51 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-family: "Lusitana", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 14.4px;
+  font-size: 0.9rem;
   line-height: 1.5;
+  font-variant-numeric: oldstyle-nums;
+}
+@media (min-width: 768px) {
+  body,
+  button,
+  input,
+  select,
+  optgroup,
+  textarea {
+    font-size: 16px;
+    font-size: 1rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   clear: both;
+}
+
+h1 {
+  font-size: 2.441em;
+}
+
+h2 {
+  font-size: 1.953em;
+}
+
+h3 {
+  font-size: 1.563em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.12em;
+}
+
+h6 {
+  font-size: 1.06em;
 }
 
 p {
@@ -480,7 +517,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #873131;
 }
 a:visited {
   color: purple;
@@ -670,45 +707,21 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-.widget select {
-  max-width: 100%;
-}
 
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Posts and pages
+## Global layouts
 --------------------------------------------------------------*/
-.sticky {
-  display: block;
+.site-content {
+  padding: 1em;
 }
 
-.hentry {
-  margin: 0 0 1.5em;
+@media screen and (min-width: 768px) {
+  .site-content {
+    padding: 2em;
+  }
 }
-
-.updated:not(.published) {
-  display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -721,6 +734,19 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -821,17 +847,4 @@ object {
   display: block;
 }
 
-.site-content {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.content-area {
-  -ms-flex: 2;
-      flex: 2;
-}
-
-.site-content .widget-area {
-  -ms-flex: 1;
-      flex: 1;
-}
+/* @import "layout/flex"; */
