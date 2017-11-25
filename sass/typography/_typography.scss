@@ -6,7 +6,7 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font_serif;
-	@include font-size(1);
+	@include font-size(0.9);
 	line-height: $font__line-height-body;
 	font-variant-numeric: oldstyle-nums;
 	
@@ -15,7 +15,7 @@ textarea {
 
 	// Tablets and larger
 	@media (min-width: 768px) {
-	
+		@include font-size(1);
 	}
 
 	// Desktops and larger 
