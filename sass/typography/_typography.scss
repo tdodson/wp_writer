@@ -8,6 +8,20 @@ textarea {
 	font-family: $font_serif;
 	@include font-size(1);
 	line-height: $font__line-height-body;
+	font-variant-numeric: oldstyle-nums;
+	
+	// Rules that apply to phones and everything larger require no queries.
+
+
+	// Tablets and larger
+	@media (min-width: 768px) {
+	
+	}
+
+	// Desktops and larger 
+	@media (min-width: 992px) { 
+
+	}
 }
 
 @import "headings";
