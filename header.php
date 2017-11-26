@@ -20,7 +20,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php if (is_front_page())?> <figure id="header-image"> <?php the_header_image_tag(); ?></figure><!-- #header-image -->
+<?php if (is_front_page()) : ?> 
+	<figure id="header-image"><?php the_header_image_tag();?></figure>
+<?php endif; ?>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
