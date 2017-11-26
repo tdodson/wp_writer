@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     style: 'expanded',
-                    sourcemap: 'none',
+                    sourcemap: 'auto',
                 },
                 files: {
                     'compiled/style-human.css': 'sass/style.scss'
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'compressed',
-                    sourcemap: 'none',
+                    sourcemap: 'auto',
                 },
                 files: {
                     'compiled/style.css': 'sass/style.scss'
