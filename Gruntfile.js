@@ -66,8 +66,7 @@ module.exports = function(grunt) {
             scripts: {
                 files: ['js/*.js'],
                 tasks: ['jshint', 'uglify']
-            }
-            
+            }   
         },
 
         /** Browsersync task **/
