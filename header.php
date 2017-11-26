@@ -56,6 +56,16 @@
 			?>
 		</nav><!-- #site-navigation -->
 
+		<nav id="social-navigation" class="secondary-navigation">
+			<button class="menu-toggle" aria-controls="social-menu" aria-expanded="false"><?php esc_html_e( 'Social Menu', 'underscores_sass' ); ?></button>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'social',
+					'menu_id'        => 'social-menu'
+				) );
+			?>
+		</nav><!-- #social-navigation -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

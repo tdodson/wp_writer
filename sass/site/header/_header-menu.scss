@@ -4,7 +4,7 @@
 	font-family: $font_sans;
 	font-weight: 400;
 	clear: left;
-
+	
 	ul {
 		display: none;
 		list-style: none;
@@ -23,7 +23,7 @@
 
 			li {
 				padding-left: 1em;
-
+				
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -36,8 +36,8 @@
 		}
 
 		li:hover > ul,
-		li.focus > ul  {
-			left:auto;
+		li.focus > ul {
+			left: auto;
 		}
 	}
 
@@ -50,9 +50,9 @@
 		width: 100%;
 		padding: .5em 1em .5em 0;
 		text-decoration: none;
-		color: #FFF;
+		color: #fff;
 	}
-
+	
 	a:hover,
 	a:focus {
 		text-decoration: underline;
@@ -62,14 +62,12 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-
 	}
-
+	
 	.menu-item-has-children,
 	.page-item-has-children {
 		min-width: 218px;
 	}
-
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
 		padding-right: 2em;
@@ -80,7 +78,8 @@ button.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;
-	color: #FFF;
+	background: inherit;
+	color: white;
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
 }
@@ -91,12 +90,14 @@ button.dropdown-toggle {
 	right: 0;
 	display: block;
 	margin: 1.2em 1.2em 0 0;
+	padding: .6em .8em;
 	font-size: 80%;
 	text-transform: uppercase;
-	color: #FFF;
+	color: white;
 	border: 1px solid hsla(0, 0%, 100%, .3);
 }
 
+/* Toggle small menu and sub-menus on */
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
@@ -106,57 +107,53 @@ button.dropdown-toggle {
 	.menu-toggle {
 		display: none;
 	}
-
+	
 	.main-navigation {
-
+		
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
 			padding-right: 2em;
 			background: hsla(0, 0%, 100%, .1);
 		}
-
+		
 		ul {
 			display: block;
 			display: flex;
 			flex-wrap: wrap;
-
+			
 			ul {
-				display: block;
-				display: flex;
-				flex-wrap: wrap;
-
-				ul {
-					flex-direction: column;
-					background: hsla(0, 0%, 100%, .1);
-					margin-left: 0;
-
-					li {
-						padding-left: 0;
-						
-						a {
-							width: 218px;
-							background: none;
-						}
-					}
-
-				}
+				flex-direction: column;
+				background: hsla(0, 0%, 100%, .1);
+				margin-left: 0;
 
 				li {
+					padding-left: 0;
+					
 					a {
-						padding: .4em 1em;
+						width: 218px;
+						background: none;
 					}
 				}
 			}
+			
+			li {
+					
+				a {
+					padding: .4em 1em; 
+				}
+			}
 		}
+		
 	}
 }
 
 @media screen and (min-width: $query_medium) {
 	.main-navigation {
-
+		
 		ul {
 			justify-content: flex-end;
 			padding-top: 0;
 		}
+		
 	}
 }

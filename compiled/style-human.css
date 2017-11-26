@@ -720,6 +720,9 @@ a:hover, a:active {
     width: 55%;
   }
 }
+/*
+Header Menu
+*/
 .main-navigation {
   display: block;
   font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
@@ -762,7 +765,7 @@ a:hover, a:active {
   width: 100%;
   padding: .5em 1em .5em 0;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 .main-navigation a:hover,
 .main-navigation a:focus {
@@ -781,7 +784,8 @@ button.dropdown-toggle {
   position: absolute;
   right: 0;
   border: none;
-  color: #FFF;
+  background: inherit;
+  color: white;
   line-height: 1.5em;
   padding: .4em 1em .4em .5em;
 }
@@ -792,12 +796,14 @@ button.dropdown-toggle {
   right: 0;
   display: block;
   margin: 1.2em 1.2em 0 0;
+  padding: .6em .8em;
   font-size: 80%;
   text-transform: uppercase;
-  color: #FFF;
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Toggle small menu and sub-menus on */
 .toggled-on ul,
 .sub-menu.toggled-on {
   display: block;
@@ -819,23 +825,18 @@ button.dropdown-toggle {
     flex-wrap: wrap;
   }
   .main-navigation ul ul {
-    display: block;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .main-navigation ul ul ul {
     flex-direction: column;
     background: rgba(255, 255, 255, 0.1);
     margin-left: 0;
   }
-  .main-navigation ul ul ul li {
+  .main-navigation ul ul li {
     padding-left: 0;
   }
-  .main-navigation ul ul ul li a {
+  .main-navigation ul ul li a {
     width: 218px;
     background: none;
   }
-  .main-navigation ul ul li a {
+  .main-navigation ul li a {
     padding: .4em 1em;
   }
 }
