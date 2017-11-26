@@ -49,20 +49,10 @@
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
+					'menu_id'        => 'primary-menu'
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-
-		<nav id="social-menu" class="social-navigation">
-			<button class="menu-toggle" aria-controls="social-menu" aria-expanded="false"><?php esc_html_e( 'Social', 'underscores_sass' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'social',
-					'menu_id'        => 'social-menu',
-				) );
-			?>
-		</nav><!-- #social-navigation -->
 
 	</header><!-- #masthead -->
 
