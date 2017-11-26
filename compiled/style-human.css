@@ -616,8 +616,7 @@ a:hover, a:active {
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -632,8 +631,7 @@ a:hover, a:active {
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #21759b;
   display: block;
   font-size: 14px;
@@ -770,10 +768,8 @@ a:hover, a:active {
 
 @media screen and (min-width: 992px) {
   .site-header {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    justify-content: space-between;
   }
 
   .site-branding {
@@ -910,3 +906,5 @@ object {
 }
 
 /* @import "layout/flex"; */
+
+/*# sourceMappingURL=style-human.css.map */

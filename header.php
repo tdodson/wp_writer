@@ -20,6 +20,8 @@
 	<?php wp_head(); ?>
 </head>
 
+<?php if (is_front_page())?> <figure id="header-image"> <?php the_header_image_tag(); ?></figure><!-- #header-image -->
+
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscores_sass' ); ?></a>
@@ -51,6 +53,7 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
