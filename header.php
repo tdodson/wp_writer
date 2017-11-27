@@ -25,23 +25,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscores_sass' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu'
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="navigation-menus">
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu'
+					) );
+				?>
+			</nav><!-- #site-navigation -->
 
-		<nav id="social-navigation" class="main-navigation">
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'social',
-					'menu_id'        => 'social-menu'
-				) );
-			?>
-		</nav><!-- #social-navigation -->
+			<nav id="social-navigation" class="main-navigation">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'social',
+						'menu_id'        => 'social-menu'
+					) );
+				?>
+			</nav><!-- #social-navigation -->
+		</div><!-- .navigation-menus -->
 
 		<div class="site-branding">
 			<?php
