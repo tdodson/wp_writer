@@ -20,10 +20,6 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php if (is_front_page()) : ?> 
-	<figure id="header-image"><?php the_header_image_tag();?></figure>
-<?php endif; ?>
-
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscores_sass' ); ?></a>
@@ -65,5 +61,9 @@
 		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->
+
+	<?php if (is_front_page()) : ?> 
+			<figure id="header-image"><?php the_header_image_tag();?></figure>
+		<?php endif; ?> <!-- front-page header image -->
 
 	<div id="content" class="site-content">
