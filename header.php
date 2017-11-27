@@ -29,6 +29,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscores_sass' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores_sass' ); ?></button>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'menu_id'        => 'primary-menu'
+				) );
+			?>
+		</nav><!-- #site-navigation -->
+
+		<nav id="social-navigation" class="main-navigation">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'social',
+					'menu_id'        => 'social-menu'
+				) );
+			?>
+		</nav><!-- #social-navigation -->
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -45,26 +64,6 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores_sass' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu'
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-
-		<nav id="social-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="social-menu" aria-expanded="false"><?php esc_html_e( 'Social Menu', 'underscores_sass' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'social',
-					'menu_id'        => 'social-menu'
-				) );
-			?>
-		</nav><!-- #social-navigation -->
 
 	</header><!-- #masthead -->
 

@@ -19,7 +19,6 @@
 }
 
 .site-branding {
-	min-height: 65px;
 }
 
 .site-title {
@@ -48,15 +47,13 @@
 
 @media screen and (min-width: $query_medium) {
 	.site-header {
-		display: flex;
-		justify-content: space-between;
+	
 	}
 	.site-branding {
-		width: 35%;
-		flex: 1 0 auto;
+		
 	}
 	.site-navigation {
-		width: 55%;
+		
 	}
 }
 /*

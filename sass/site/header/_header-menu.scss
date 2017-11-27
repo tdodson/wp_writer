@@ -1,11 +1,39 @@
 .main-navigation {
-
-} // class encompasses both #site-navigation and #social-navigation
+	li {
+		font-size: 1em;
+		list-style: none;
+		line-height: 1.5;
+		a {
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+} // .main-navigation class encompasses both #site-navigation and #social-navigation
 
 #site-navigation {
 
 }
 
 #social-navigation {
+	ul {
+		display: flex;
+		flex-flow: wrap row;
+	}
+}
 
+@media screen and (min-width: $query_small) {
+	.menu-toggle {
+		display: none;
+	}
+	nav ul {
+		display: flex;
+		flex-flow: wrap row;
+	}
+	#site-navigation {
+		ul {
+			li {
+				flex: auto;
+			}
+		}
+	}
 }
