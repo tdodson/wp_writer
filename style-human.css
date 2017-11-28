@@ -681,22 +681,24 @@ a:hover, a:active {
   }
 }
 
-.site-title {
+.site-branding {
+  padding-bottom: 1em;
+}
+.site-branding .site-title {
   margin: 0;
   padding: 0;
   font-size: 1.6em;
   font-weight: 600;
   line-height: 1.5;
 }
-.site-title a {
+.site-branding .site-title a {
   color: #FFF;
   text-decoration: none;
 }
-.site-title a:hover, .site-title a:focus {
+.site-branding .site-title a:hover, .site-branding .site-title a:focus {
   text-decoration: underline;
 }
-
-.site-description {
+.site-branding .site-description {
   margin: 0;
   font-size: 0.9em;
   font-style: italic;
@@ -706,38 +708,68 @@ a:hover, a:active {
 /*
 Header Menu
 */
-.main-navigation li {
+.navigation-menus {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-navigation ul {
+  padding: 0;
+  margin: 0;
+}
+.main-navigation ul li {
   font-size: 1em;
   list-style: none;
   line-height: 1.5;
 }
-.main-navigation li a {
+.main-navigation ul li a {
   color: #FFF;
   text-decoration: none;
 }
 
+#site-navigation {
+  -ms-flex: 2;
+      flex: 2;
+}
+#site-navigation ul li a {
+  display: -ms-flexbox;
+  display: flex;
+  padding: .6em 0;
+}
+#site-navigation ul li a:hover {
+  background: #404040;
+}
+
+#social-navigation {
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-flow: wrap flow;
+      flex-flow: wrap flow;
+}
 #social-navigation ul {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: wrap row;
-      flex-flow: wrap row;
+  -ms-flex-flow: nowrap row;
+      flex-flow: nowrap row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+#social-navigation ul li {
+  padding-right: 1.25em;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  nav ul {
+  #site-navigation ul {
+    max-width: 32em;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: wrap row;
         flex-flow: wrap row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
   }
-
-  #site-navigation ul li {
-    -ms-flex: auto;
-        flex: auto;
+  #site-navigation ul li a {
+    padding: 0;
   }
 }
 /*--------------------------------------------------------------

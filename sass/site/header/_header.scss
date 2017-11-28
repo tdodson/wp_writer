@@ -15,34 +15,31 @@
 	@media screen and (min-width: $query_small) {
 		padding: 1em 2em;
 	}
-
 }
 
 .site-branding {
-}
-
-.site-title {
-	margin: 0;
-	padding: 0;
-	font-size: 1.6em;
-	font-weight: 600;
-	line-height:1.5;
-
-	a {
-		color: #FFF;
-		text-decoration: none;
-		&:hover,
-		&:focus {
-			text-decoration: underline;
+	padding-bottom: 1em;
+	.site-title {
+		margin: 0;
+		padding: 0;
+		font-size: 1.6em;
+		font-weight: 600;
+		line-height:1.5;
+		a {
+			color: #FFF;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
 		}
 	}
-}
-
-.site-description {
-	margin: 0;
-	font-size: 0.9em;
-	font-style: italic;
-	font-weight: 100;
+	.site-description {
+		margin: 0;
+		font-size: 0.9em;
+		font-style: italic;
+		font-weight: 100;
+	}
 }
 
 @media screen and (min-width: $query_medium) {
