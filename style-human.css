@@ -734,7 +734,8 @@ Header Menu
 #site-navigation ul li a {
   display: -ms-flexbox;
   display: flex;
-  padding: .6em 0;
+  max-width: 50%;
+  padding: .6em;
 }
 #site-navigation ul li a:hover {
   background: #404040;
@@ -759,17 +760,24 @@ Header Menu
 }
 
 @media screen and (min-width: 768px) {
+  .main-navigation ul {
+    height: 2.688em;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+
   #site-navigation ul {
     max-width: 32em;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: wrap row;
-        flex-flow: wrap row;
+    -ms-flex-flow: nowrap row;
+        flex-flow: nowrap row;
     -ms-flex-pack: justify;
         justify-content: space-between;
   }
   #site-navigation ul li a {
-    padding: 0;
+    max-width: none;
+    padding: .6em 1em;
   }
 }
 /*--------------------------------------------------------------
