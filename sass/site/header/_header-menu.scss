@@ -48,7 +48,8 @@
 	}
 }
 
-@media screen and (min-width: $query_small) {
+// Horizontal Navigation
+@media screen and (min-width: $query__small) {
 	.main-navigation {
 		ul {
 			height: 2.688em;
