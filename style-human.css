@@ -360,6 +360,10 @@ big {
   font-size: 125%;
 }
 
+.pipe {
+  font-weight: 700;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -520,10 +524,10 @@ a {
   color: #873131;
 }
 a:visited {
-  color: #170808;
+  color: #877231;
 }
 a:hover, a:focus, a:active {
-  color: #c35b5b;
+  color: #ac3f3f;
 }
 a:focus {
   outline: thin dotted;
@@ -737,7 +741,7 @@ Header Menu
   max-width: 50%;
   padding: .6em;
 }
-#site-navigation ul li a:hover {
+#site-navigation ul li a:hover, #site-navigation ul li a:focus {
   background: #404040;
 }
 
@@ -780,6 +784,58 @@ Header Menu
     padding: .6em 1em;
   }
 }
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+.entry-header {
+  font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.entry-title {
+  margin: .125em 0 .25em;
+}
+
+.entry-meta a {
+  text-decoration: none;
+}
+.entry-meta a:hover, .entry-meta a:focus {
+  text-decoration: underline;
+}
+
+time.updated {
+  visibility: hidden;
+}
+
+.cat-links a {
+  text-decoration: none;
+}
+.cat-links a:hover, .cat-links a:focus {
+  text-decoration: underline;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

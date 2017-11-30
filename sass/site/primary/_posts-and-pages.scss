@@ -6,6 +6,40 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-header {
+	font-family: $font-sans;
+}
+
+.entry-title {
+	margin: .125em 0 .25em;
+}
+
+.entry-meta {
+	a {
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+}
+
+time.updated {
+    visibility: hidden;
+}
+
+.cat-links {
+	a {
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+}
+
 .updated:not(.published) {
 	display: none;
 }

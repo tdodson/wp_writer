@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -22,6 +23,8 @@
 		<div class="entry-meta">
 			<?php underscores_sass_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php undersocres_sass_category_list(); ?> <!-- custom function in template-tags.php -->
+
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
