@@ -11,15 +11,27 @@
 }
 
 .entry-title {
-	margin: .125em 0 .25em;
+	margin: .125em 0 0;
+	font-size: 1.953em;
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			border-bottom: 3px solid $color__link;
+		}
+	}
 }
 
 .entry-meta {
 	a {
+		color: $color__text-main;
 		text-decoration: none;
+		font-size: 0.9em;
+		font-weight: 700;
 		&:hover,
 		&:focus {
-			text-decoration: underline;
+			border-bottom: 2px solid $color__link;
 		}
 	}
 
@@ -31,10 +43,14 @@ time.updated {
 
 .cat-links {
 	a {
+		color: $color__text-main;
 		text-decoration: none;
+		font-variant: small-caps;
+		font-size: 0.9em;
+		font-weight: 300;
 		&:hover,
 		&:focus {
-			text-decoration: underline;
+			border-bottom: 1px solid $color__link;
 		}
 	}
 
