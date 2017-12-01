@@ -64,3 +64,16 @@ big {
 .pipe {
     font-weight: 600;
 }
+
+.dropcap {
+    float: left;
+    font-size: 400%;
+    margin-top: 20px;
+    margin-right: 3px;
+}
+
+.smallcaps {
+    font-variant: small-caps;
+    letter-spacing: 0.075em;
+    font-weight: 600; // pseudo-small-caps for this font are too thin
+}
