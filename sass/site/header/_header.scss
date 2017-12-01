@@ -30,7 +30,7 @@
 			text-decoration: none;
 			&:hover,
 			&:focus {
-				text-decoration: underline;
+				border-bottom: 5px solid $color__link;
 			}
 		}
 	}
