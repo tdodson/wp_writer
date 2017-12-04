@@ -134,6 +134,7 @@ function underscores_sass_widgets_init() {
       		),
       		'public' => true,
       		'has_archive' => false,
+      		'rewrite' => array('slug' => 'stories'),
     	)
   	);
 }
@@ -166,6 +167,8 @@ function underscores_sass_scripts() {
 	wp_enqueue_script( 'underscores_sass-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'underscores_sass-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'underscores_sass-functions', get_template_directory_uri() . '/js/typed.js', array(), '20171203', true );
 
 	wp_enqueue_script( 'underscores_sass-functions', get_template_directory_uri() . '/js/functions.js', array(), '20171130', true );
 

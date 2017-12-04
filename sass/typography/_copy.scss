@@ -23,6 +23,7 @@ blockquote {
 	p {
 		&:after {
 			content: "\201D"; // code # from http://www.evotech.net/articles/testjsentities.html 
+			color: $color__link;
 		}
 	}
 }
@@ -76,4 +77,10 @@ big {
     font-variant: small-caps;
     letter-spacing: 0.075em;
     font-weight: 600; // pseudo-small-caps for this font are too thin
+}
+
+.citation {
+	padding-left: 1.5em;
+    text-indent: -1.5em;
+    letter-spacing: 0.05em;
 }

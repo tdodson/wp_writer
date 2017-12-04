@@ -14,8 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-		</div><!-- .site-info -->
+		<p>Copyright &copy; Thomas A. Dodson</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
