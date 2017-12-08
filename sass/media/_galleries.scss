@@ -19,15 +19,21 @@
 .gallery-caption {
 	display: block;
 }
-
-/** Temporary Home page adjustment **/
-.home .entry-title, .site-footer {
+ 
+.home .entry-title {
     display: none
 }
 
 .home #content {
     padding: 0;
     margin: 0;
+}
+
+.home #secondary {
+    margin-top: -24px;
+    h2 {
+        margin-bottom: 10px;
+    }
 }
 
 
