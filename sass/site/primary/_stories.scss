@@ -15,9 +15,7 @@
         }
 		img {
 			float: left;
-			margin-top: -30px;
 			padding-bottom: 1.7em;
-        	// max-width: 100vw;
         	max-width: 100%;
         	height: auto;
 		}
@@ -30,10 +28,10 @@
             margin-top: 0;
            	margin-bottom: 0.488em;
            	padding: 0;
-            +p.intro {
+            &.intro {
             	text-indent: 0;
             }
-            +p.first {
+            &.first {
             	text-indent: 0;
             	margin-top: 4em;
             }
