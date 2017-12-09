@@ -892,19 +892,11 @@ Header Menu
 .full-bleed {
   width: 100vw;
   max-height: 1200px;
-  max-width: 700px;
-  margin-top: 1em;
   margin-left: -1em;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .full-bleed {
-    margin-top: -2em;
-  }
-}
-@media screen and (min-width: 768px) {
-  .full-bleed {
-    margin-top: 1.5em;
     margin-right: -2em;
   }
 }
@@ -1158,9 +1150,12 @@ Header Menu
   margin-top: 4em;
 }
 @media screen and (min-width: 768px) {
+  #story .full-bleed {
+    max-width: 700px;
+    padding-bottom: 1.4em;
+  }
   #story img {
     width: 100%;
-    padding-bottom: 1.4em;
   }
 }
 
