@@ -892,13 +892,7 @@ Header Menu
 .full-bleed {
   width: 100vw;
   max-height: 1200px;
-  margin-left: -1em;
   overflow: hidden;
-}
-@media screen and (min-width: 992px) {
-  .full-bleed {
-    margin-right: -2em;
-  }
 }
 @media screen and (min-width: 1080px) {
   .full-bleed {
@@ -1120,6 +1114,7 @@ Header Menu
   font-size: 3.3125em;
   font-weight: 700;
   padding-bottom: 18px;
+  margin-left: 1em;
 }
 #story article h2 {
   font-size: 2.25em;
@@ -1138,9 +1133,8 @@ Header Menu
   line-height: 150%;
   font-feature-settings: "liga" 1, "onum" 1, "smcp" 1;
   text-indent: 1.5em;
-  margin-top: 0;
-  margin-bottom: 0.488em;
-  padding: 0;
+  margin: 0 0 0.488em 1em;
+  padding: 0 1em 0 0;
 }
 #story article p.intro {
   text-indent: 0;
@@ -1150,11 +1144,17 @@ Header Menu
   margin-top: 4em;
 }
 @media screen and (min-width: 768px) {
-  #story .full-bleed {
-    max-width: 700px;
-    padding-bottom: 1.4em;
+  #story article h1 {
+    margin-left: 0;
   }
-  #story img {
+  #story article p {
+    margin-left: 0;
+    padding: 0;
+  }
+  #story article .full-bleed {
+    max-width: 700px;
+  }
+  #story article img {
     width: 100%;
   }
 }
