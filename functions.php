@@ -130,8 +130,9 @@ function underscores_sass_widgets_init() {
     		array(
       			'labels' => array(
         		'name' => __( 'Story' ),
-        		'singular_name' => __( 'Story' )
+        		'singular_name' => __( 'Story' ),
       		),
+      		'supports' => array('title', 'editor', 'thumbnail'),
       		'public' => true,
       		'has_archive' => false,
       		'rewrite' => array('slug' => 'stories'),
