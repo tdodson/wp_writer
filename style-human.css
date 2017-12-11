@@ -892,13 +892,23 @@ Header Menu
 .full-bleed {
   width: 100vw;
   max-height: 1200px;
+  margin-left: -1em;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .full-bleed {
+    margin-right: -2em;
+  }
 }
 @media screen and (min-width: 1080px) {
   .full-bleed {
     margin-right: calc( ((-100vw + #($size__max-width))/2) - 2em);
     margin-left: calc( ((-100vw + #($size__max-width))/2) - 2em);
   }
+}
+.full-bleed img {
+  display: block;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -1122,10 +1132,8 @@ Header Menu
   padding-bottom: 15px;
 }
 #story article img {
-  float: left;
   padding-bottom: 1.7em;
-  max-width: 100%;
-  height: auto;
+  max-height: 466px;
 }
 #story article p {
   max-width: 705px;
