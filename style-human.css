@@ -892,7 +892,6 @@ Header Menu
 .full-bleed {
   width: 100vw;
   max-height: 1200px;
-  margin-left: -1em;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -1133,7 +1132,6 @@ Header Menu
 }
 #story article img {
   padding-bottom: 1.7em;
-  max-height: 466px;
 }
 #story article p {
   max-width: 705px;
@@ -1438,8 +1436,6 @@ object {
 .stories figure p {
   margin: 0;
   padding: 0 1em 0.5em 1em;
-  letter-spacing: 1px;
-  font-size: 78.5%;
 }
 
 .stories figure figcaption,
