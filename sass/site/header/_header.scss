@@ -1,0 +1,59 @@
+#header-image {
+	img {
+		display: block;
+	}
+}
+
+.site-header {
+	position: relative;
+	padding: 1em;
+	font-family: $font-sans;
+	color: #fff;
+	background-color: $color__skin;
+
+
+	@media screen and (min-width: $query__small) {
+		padding: 1em 2em;
+	}
+}
+
+.site-branding {
+	padding-bottom: 1em;
+	.site-title {
+		margin: 0;
+		padding: 0;
+		font-size: 1.6em;
+		font-weight: 600;
+		line-height:1.5;
+		a {
+			color: #FFF;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				border-bottom: 5px solid $color__link;
+			}
+		}
+	}
+	.site-description {
+		margin: 0;
+		font-size: 0.9em;
+		font-style: italic;
+		font-weight: 100;
+	}
+}
+
+@media screen and (min-width: $query__medium) {
+	.site-header {
+	
+	}
+	.site-branding {
+		
+	}
+	.site-navigation {
+		
+	}
+}
+/*
+Header Menu
+*/
+@import "header-menu";

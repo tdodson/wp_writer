@@ -1,0 +1,75 @@
+.navigation-menus {
+	display: flex;
+}
+
+.main-navigation {
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			font-size: 1em;
+			list-style: none;
+			line-height: 1.5;
+			a {
+				color: #FFF;
+				text-decoration: none;
+			}
+		}
+	}
+} // .main-navigation class encompasses both #site-navigation and #social-navigation
+
+#site-navigation {
+	flex: 2;
+	ul {
+		li {
+			a {
+				display: flex;
+				max-width: 50%;
+				padding: .6em;
+				&:hover,
+					&:focus {
+					background: hsl(0, 0%, 25%);
+				}
+			}
+
+		}
+	}
+}
+
+#social-navigation {
+	flex: 1;
+	flex-flow: wrap flow;
+	ul {
+		display: flex;
+		flex-flow: nowrap row;
+		justify-content: flex-end;
+		li {
+			padding-right: 1.25em;
+		} 
+	}
+}
+
+// Horizontal Navigation
+@media screen and (min-width: $query__small) {
+	.main-navigation {
+		ul {
+			height: 2.688em;
+			align-items: center;
+		}
+	}
+
+	#site-navigation {
+		ul {
+			max-width: 32em;
+			display: flex;
+			flex-flow: nowrap row;
+			justify-content: space-between;
+			li {
+				a {
+					max-width: none;
+					padding: .6em 1em;
+				}
+			}
+		}
+	}	
+}

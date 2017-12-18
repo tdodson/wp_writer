@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -22,29 +23,46 @@
 		<div class="entry-meta">
 			<?php underscores_sass_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php undersocres_sass_category_list(); ?> <!-- custom function in template-tags.php -->
+
 		<?php
 		endif; ?>
+		
+		<?php 
+		if ( has_post_thumbnail() ) { ?>
+		<figure class="featured-image full-bleed">
+			<?php 
+			the_post_thumbnail() 
+			?>
+		</figure>
+		<?php } ?>
+	
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscores_sass' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+			/* Could use the !is_singular() function here with the_excerpt(); instead of creating excerpt.php? */
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscores_sass' ),
-				'after'  => '</div>',
-			) );
+			if ( !is_singular() ) :
+				the_excerpt();
+			else :
+				the_content( sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscores_sass' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				) ); 
+				 wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscores_sass' ),
+					'after'  => '</div>',
+				) );
+			endif; 
 		?>
 	</div><!-- .entry-content -->
 

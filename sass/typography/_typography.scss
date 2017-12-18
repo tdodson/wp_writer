@@ -14,7 +14,7 @@ textarea {
 
 
 	// Tablets and larger
-	@media (min-width: $query_small) {
+	@media (min-width: $query__small) {
 		@include font-size(1);
 	}
 

@@ -44,7 +44,8 @@ if ( ! function_exists( 'underscores_sass_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'underscores_sass' ),
+			'primary' => esc_html__( 'Primary', 'underscores_sass' ),
+			'social' => esc_html__( 'Social', 'underscores_sass' ),
 		) );
 
 		/*
@@ -123,6 +124,23 @@ add_action( 'after_setup_theme', 'underscores_sass_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function underscores_sass_widgets_init() {
+	
+	function create_post_type() {
+  		register_post_type( 'u_sass_story',
+    		array(
+      			'labels' => array(
+        		'name' => __( 'Story' ),
+        		'singular_name' => __( 'Story' ),
+      		),
+      		'supports' => array('title', 'editor', 'thumbnail'),
+      		'public' => true,
+      		'has_archive' => false,
+      		'rewrite' => array('slug' => 'stories'),
+    	)
+  	);
+}
+add_action( 'init', 'create_post_type' );
+
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'underscores_sass' ),
 		'id'            => 'sidebar-1',
@@ -143,17 +161,23 @@ function underscores_sass_scripts() {
 
 	wp_enqueue_style ( 'underscores_sass_fonts', 'https://fonts.googleapis.com/css?family=Lusitana:400,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i' );
 
+	wp_enqueue_script ( 'font-awesome', 'https://use.fontawesome.com/ab7d73311e.js');
+
 	wp_enqueue_style( 'underscores_sass-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'underscores_sass-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'underscores_sass-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'underscores_sass-functions', get_template_directory_uri() . '/js/typed.js', array(), '20171203', true );
+
+	wp_enqueue_script( 'underscores_sass-functions', get_template_directory_uri() . '/js/functions.js', array(), '20171130', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'underscores_sass_scripts' );
+add_action( 'wp_enqueue_scripts', 'underscores_sass_scripts', 'font-awesome' );
 
 /**
  * Implement the Custom Header feature.

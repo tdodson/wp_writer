@@ -1,5 +1,5 @@
-$baseRed: #873131;
-$opac_black: rgba(0,0,0,0.8);
+$color__skin: #333; // headers, etc.
+$color__trans-black: rgba(0,0,0,0.8); // 80% transparent black
 
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
@@ -11,9 +11,10 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: $baseRed;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+
+$color__link: #873131;
+$color__link-visited: adjust-hue($color__link, 45%);
+$color__link-hover: lighten($color__link, 10%);
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;

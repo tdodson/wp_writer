@@ -19,3 +19,211 @@
 .gallery-caption {
 	display: block;
 }
+ 
+.home .entry-title {
+    display: none
+}
+
+.home #content {
+    padding: 0;
+    margin: 0;
+}
+
+.home #secondary {
+    margin-top: -24px;
+    h2 {
+        margin-bottom: 10px;
+    }
+}
+
+
+/** Homepage Text Display with Typed.js **/
+.home .typed {
+    display: flex;
+    max-width: 85%;
+    word-wrap: break-word;
+    color: #FFF;
+    position: absolute;
+    top: 59%;
+    left: 10%;
+    h2 {
+        font-size: 1.3em;
+    }
+    @media screen and (max-width: 365px) {
+        top: 63%;
+        left: 17%;
+    }
+    @media screen and (min-width: 375px) {
+        top: 61%;
+        left: 20%;
+    }
+
+    @media screen and (min-width: 410px) {
+        top: 64%;
+        left: 23%;
+    }
+    @media screen and (min-width: 414px) {
+        top: 59%;
+        left: 23%;
+    }
+    @media screen and (min-width: 768px) {
+        top: 34%;
+        h2 {
+            font-size: 1.953em;
+        }
+    }
+    @media screen and (min-width: 780px) {
+        top: 54%;
+        h2 {
+            font-size: 2.441em;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        top: 34%;
+        h2 {
+            font-size: 2.441em;
+        }
+    }
+    @media screen and (min-width: 1028px) {
+        top: 54%;
+    }
+    
+}
+
+/** Stories Page Gallery */
+.stories-gallery {
+	margin: 0 auto;
+}
+
+.stories {
+    // position: relative;
+    // clear: both;
+    // 
+    padding: 0;
+    list-style: none;
+    figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-width: 320px;
+        max-width: 530px;
+        max-height: 397px;
+        height: auto;
+        background: #3085a3;
+        text-align: center;
+        cursor: pointer;
+        img {
+            position: relative;
+            display: block;
+            opacity: 0.8;
+        }
+        figcaption {
+            color: #fff;
+            padding: 1.5em; 
+            font-size: 1em; // mobile size
+            line-height: 125%; // mobile size
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            &::before,
+            &::after {
+                pointer-events: none;
+            }
+        }
+        h2 {
+            margin: 0;
+            line-height: 125%; // mobile size
+            font-size: 25px; // mobile size
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        p {
+            margin: 0;
+            padding: 0 1em 0.5em 1em; // mobile size
+        }
+    }
+}
+
+.stories figure figcaption,
+.stories figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; // Make sure link is available for touch 
+}
+
+/** Story Effect **/
+figure.effect-story {
+    background: #030c17;
+    img {
+        opacity: 0.9;
+        transition: opacity 0.35s;
+    }
+    h2 {
+        margin: 8% 0 10px 0;
+        transition: transform 0.35s;
+    }
+    p {
+        padding: 1em;
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: scale(1.5);
+    }
+    &:hover h2 {
+        transform: scale(0.9);
+    }
+    figcaption {
+        p {
+            font-family: $font-sans;
+        }
+        &::before {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+            content: '';
+            opacity: 0;
+            transition: opacity 0.35s, transform 0.35s;
+            transform: scale3d(1.4, 1.4, 1);
+        }
+    }
+}
+
+figure.effect-story:hover figcaption::before,
+figure.effect-story:hover p {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+figure.effect-story:hover figcaption {
+    background-color: rgba(58, 52, 42, 0);
+}
+
+figure.effect-story:hover img {
+    opacity: 0.4;
+}
+
+@media screen and (min-width: $query__small) {
+	.stories-gallery {
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.stories {
+			figure {
+				img {
+					width: 470px;
+					height: 360px;
+
+				}
+
+			}
+		}
+	}
+}
