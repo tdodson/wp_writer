@@ -28,7 +28,7 @@
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
-	font-family: $font-sans;
+	font-family: $font__sans;
 	font-size: 80%;
 }
 
@@ -152,7 +152,7 @@
 	a {
 		display: inline-block;
 		padding: .5em 1.4em;
-		font-family: $font-sans;
+		font-family: $font__sans;
 		font-size: 85%;
 		color: #000;
 		line-height: 1.3em;
@@ -200,7 +200,7 @@
 }
 
 .comment-form {
-	font-family: $font-sans;
+	font-family: $font__sans;
 	line-height: 1.3em;
 	
 	a {

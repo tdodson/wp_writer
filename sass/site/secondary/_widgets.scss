@@ -5,7 +5,7 @@
 .widget {
 	margin: 0 0 2em;
 	padding: 0 2em;
-	font-family: $font-sans;
+	font-family: $font__sans;
 
 	ul,
 	ol {
@@ -39,7 +39,7 @@
 		width: 100%;
 		height: 2.5em;
 		padding: 10px;
-		font-family: $font-sans;
+		font-family: $font__sans;
 		border: 1px solid #ccc;
 	}
 
