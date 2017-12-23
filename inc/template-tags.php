@@ -106,8 +106,8 @@ function undersocres_sass_category_list() {
 
 function underscores_sass_post_navigation() {
 	the_post_navigation( array(
-            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next ', 'underscores_sass' ) . '</span>' . '<span class="screen-reader-text">' . __('Next post: ', 'underscores_sass') . '</span>' . '<span class="post-title">%title</span>',
-            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous ', 'underscores_sass' ) . '</span>' . '<span class="screen-reader-text">' . __('Previous post: ', 'underscores_sass') . '</span>' . '<span class="post-title">%title</span>',
+            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next: ', 'underscores_sass' ) . '</span>' . '<span class="screen-reader-text">' . __('Next post: ', 'underscores_sass') . '</span>' . '<span class="post-title">%title</span>',
+            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'underscores_sass' ) . '</span>' . '<span class="screen-reader-text">' . __('Previous post: ', 'underscores_sass') . '</span>' . '<span class="post-title">%title</span>',
         ) );
 };
 
