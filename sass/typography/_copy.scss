@@ -82,7 +82,7 @@ big {
     line-height: .25em;
 }
 
-.smallcaps {
+abbr, .smallcaps {
     font-variant: small-caps;
     letter-spacing: 0.075em;
     font-weight: 600; // pseudo-small-caps for this font are too thin
