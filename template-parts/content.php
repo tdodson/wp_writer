@@ -23,7 +23,7 @@
 		<div class="entry-meta">
 			<?php underscores_sass_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php undersocres_sass_category_list(); ?> <!-- custom function in template-tags.php -->
+		<?php underscores_sass_category_list(); ?> <!-- custom function in template-tags.php -->
 
 		<?php
 		endif; ?>
