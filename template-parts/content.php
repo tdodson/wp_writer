@@ -79,7 +79,7 @@
 				) );
 				if(get_field('journal')) {
 					echo '<aside class="journal">Originally published in ';
-					echo '<cite>' . get_field('journal') . '</cite>';
+					echo '<cite>' . get_field('journal') . '</cite>.';
 					echo '</aside>';
 				}
 				 wp_link_pages( array(
