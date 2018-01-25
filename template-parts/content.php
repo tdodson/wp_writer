@@ -77,11 +77,14 @@
 					),
 					get_the_title()
 				) );
-				if(get_field('journal')) {
-					echo '<aside class="journal">Originally published in ';
-					echo '<cite>' . get_field('journal') . '</cite>.';
-					echo '</aside>';
-				}
+				
+				if( function_exists( 'get_field' ) ) {
+					if(get_field( 'journal' ) ) {
+						echo '<aside class="journal">Originally published in ';
+						echo '<cite>' . get_field('journal') . '</cite>.';
+						echo '</aside>';
+					} //end conditional statement testing for 'journal' field
+				} // end conditional statement testing for get_field
 				 wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscores_sass' ),
 					'after'  => '</div>',
