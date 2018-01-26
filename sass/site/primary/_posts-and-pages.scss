@@ -35,6 +35,11 @@
 	}
 
 }
+.post {
+	.entry-content {
+		margin: 0; // nested in .post for necessary specificity
+	}
+}
 
 .cat-links {
 	a {
