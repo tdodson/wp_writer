@@ -51,6 +51,13 @@
 
 }
 
+.read-more {
+	@include paragraph-icon;
+	&:before {
+		vertical-align: top;
+	}
+}
+
 .updated:not(.published) {
 	display: none;
 }

@@ -901,6 +901,17 @@ Header Menu
   border-bottom: 1px solid #873131;
 }
 
+.read-more:before {
+  font-family: FontAwesome;
+  content: '\f036';
+  vertical-align: middle;
+  color: #737373;
+  padding-right: 3px;
+}
+.read-more:before {
+  vertical-align: top;
+}
+
 .updated:not(.published) {
   display: none;
 }
