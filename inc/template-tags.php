@@ -110,11 +110,3 @@ function underscores_sass_post_navigation() {
             'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'underscores_sass' ) . '</span>' . '<span class="screen-reader-text">' . __('Previous post: ', 'underscores_sass') . '</span>' . '<span class="post-title">%title</span>',
         ) );
 };
-
-
-
-
-
-
-
-
