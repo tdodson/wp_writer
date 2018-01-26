@@ -58,12 +58,6 @@
 		text-indent: -1.9em;
 		padding-left: 1.9em;
 		
-		&:before {
-			font-family: $font__icons;
-			content: '\f036'; // left paragraph icon
-			vertical-align: middle;
-			color: lighten($color__text-main, 20%);
-			padding-right: 3px;
-		}
+		@include paragraph-icon;
 	}
 }
