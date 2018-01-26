@@ -9,17 +9,18 @@
 
 	ul,
 	ol {
-		padding: .7em 0 0;
+		padding: 0.7em 0 0;
 		margin-bottom: 0;
 		list-style-type: none;
 
 		li {
 			display: block;
-			line-height: 2em;
+			line-height: 1.5em;
+			padding-bottom: 0.75em;
 
 			ul,
 			ol {
-				margin-left: .5em;
+				margin-left: 0.5em;
 
 				@media screen and (min-width: 30em) {
 					margin-left: 1em;
@@ -47,6 +48,22 @@
 
 .widget-title {
 	margin-top: 0;
-	margin-bottom: .5em;
+	margin-bottom: .3em;
 	font-size: 1.4em;
+}
+
+.widget ul {
+	padding: 0;
+	li {
+		text-indent: -1.9em;
+		padding-left: 1.9em;
+		
+		&:before {
+			font-family: $font__icons;
+			content: '\f036'; // left paragraph icon
+			vertical-align: middle;
+			color: lighten($color__text-main, 20%);
+			padding-right: 3px;
+		}
+	}
 }
