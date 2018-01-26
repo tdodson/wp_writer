@@ -48,3 +48,21 @@
         padding-right: 3px;
     }
 }
+
+@mixin leftarrow-icon {
+	&:before {	
+		font-family: $font__icons;
+        content: '\f060'; // left fa-arrow-left icon
+        color: lighten($color__text-main, 20%);
+        padding-right: 6px;
+    }
+}
+
+@mixin rightarrow-icon {
+	&:after {	
+		font-family: $font__icons;
+        content: '\f061'; // left fa-arrow-right icon
+        color: lighten($color__text-main, 20%);
+        padding-left: 6px;
+    }
+}

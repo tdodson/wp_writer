@@ -579,18 +579,36 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 /** Content Navigation **/
-.site-main .comment-navigation, .site-main posts-navigation, .site-main post-navigation {
+.comment-navigation .site-main, posts-navigation .site-main, post-navigation .site-main {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-.comment-navigation .nav-previous, posts-navigation .nav-previous, post-navigation .nav-previous {
+
+.post-navigation {
+  margin-bottom: 4em;
+}
+
+.nav-previous {
   float: left;
   width: 50%;
 }
-.comment-navigation .nav-next, posts-navigation .nav-next, post-navigation .nav-next {
+.nav-previous:before {
+  font-family: FontAwesome;
+  content: '\f060';
+  color: #737373;
+  padding-right: 6px;
+}
+
+.nav-next {
   float: right;
   text-align: right;
   width: 50%;
+}
+.nav-next:after {
+  font-family: FontAwesome;
+  content: '\f061';
+  color: #737373;
+  padding-left: 6px;
 }
 
 /*--------------------------------------------------------------

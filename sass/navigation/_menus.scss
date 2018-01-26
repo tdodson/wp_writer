@@ -1,19 +1,25 @@
 /** Content Navigation **/
 .comment-navigation, posts-navigation, post-navigation {
 
-	.site-main & {
+	.site-main {
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
+}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+.post-navigation {
+	margin-bottom: 4em;
+}
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+.nav-previous {
+	float: left;
+	width: 50%;	
+	@include leftarrow-icon;		
+}
+
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+	@include rightarrow-icon;	
 }
