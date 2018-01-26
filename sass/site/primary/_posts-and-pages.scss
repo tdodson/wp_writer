@@ -42,6 +42,7 @@
 }
 
 .cat-links {
+	@include tags-icon;
 	a {
 		color: $color__text-main;
 		text-decoration: none;

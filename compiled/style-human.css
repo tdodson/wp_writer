@@ -880,6 +880,12 @@ Header Menu
   margin: 0;
 }
 
+.cat-links:before {
+  font-family: FontAwesome;
+  content: '\f02c';
+  color: #737373;
+  padding-right: 3px;
+}
 .cat-links a {
   color: #404040;
   text-decoration: none;

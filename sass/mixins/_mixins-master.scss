@@ -66,3 +66,12 @@
         padding-left: 6px;
     }
 }
+
+@mixin tags-icon {
+	&:before {	
+		font-family: $font__icons;
+        content: '\f02c'; // left fa-tags icon
+        color: lighten($color__text-main, 20%);
+        padding-right: 3px;
+    }
+}
