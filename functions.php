@@ -132,10 +132,12 @@ function underscores_sass_widgets_init() {
         		'name' => __( 'Story' ),
         		'singular_name' => __( 'Story' ),
       		),
-      		'supports' => array('title', 'editor', 'thumbnail'),
+      		'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'revisions'),
       		'public' => true,
       		'has_archive' => false,
       		'rewrite' => array('slug' => 'stories'),
+      		'menu_position' => 20,
+      		'menu_icon' => 'dashicons-book',
     	)
   	);
 }
