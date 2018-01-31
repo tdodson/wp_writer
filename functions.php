@@ -146,6 +146,7 @@ function underscores_sass_widgets_init() {
       		'rewrite' => array('slug' => 'stories'),
       		'menu_position' => 20,
       		'menu_icon' => 'dashicons-book',
+      		'show_in_rest' => true,	
     	)
   	);
 }
