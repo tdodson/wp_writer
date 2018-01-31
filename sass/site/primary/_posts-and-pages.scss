@@ -46,7 +46,8 @@
 	a {
 		color: $color__text-main;
 		text-decoration: none;
-		font-variant: small-caps;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 		font-size: 0.9em;
 		font-weight: 300;
 		&:hover,

@@ -889,7 +889,8 @@ Header Menu
 .cat-links a {
   color: #404040;
   text-decoration: none;
-  font-variant: small-caps;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   font-size: 0.9em;
   font-weight: 300;
 }
