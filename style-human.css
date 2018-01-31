@@ -904,8 +904,8 @@ Header Menu
   color: #404040;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9em;
+  letter-spacing: 0.07em;
+  font-size: 0.8em;
   font-weight: 300;
 }
 .cat-links a:hover, .cat-links a:focus {
