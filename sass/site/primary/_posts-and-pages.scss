@@ -58,6 +58,10 @@
 
 }
 
+.blog .entry-content>p {
+	margin-bottom: 1em;
+} 
+
 .read-more {
 	@include paragraph-icon;
 	&:before {

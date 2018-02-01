@@ -898,6 +898,10 @@ Header Menu
   border-bottom: 1px solid #873131;
 }
 
+.blog .entry-content > p {
+  margin-bottom: 1em;
+}
+
 .read-more:before {
   font-family: FontAwesome;
   content: '\f036';
