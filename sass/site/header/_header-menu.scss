@@ -32,8 +32,7 @@
 				}
 			}
 			&.current-menu-item {
-				padding-top: 2px;
-				border-bottom: 2px solid $color__link;
+				border-left: 2px solid #FFF;
 			}
 
 		}
@@ -68,7 +67,12 @@
 			display: flex;
 			flex-flow: nowrap row;
 			justify-content: space-between;
-			li {
+			li {	
+				&.current-menu-item {
+					padding-top: 2px;
+					border-bottom: 2px solid #FFF;
+					border-left: none;
+				}
 				a {
 					max-width: none;
 					padding: .6em 1em;

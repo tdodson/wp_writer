@@ -815,8 +815,7 @@ Header Menu
   background: #404040;
 }
 #site-navigation ul li.current-menu-item {
-  padding-top: 2px;
-  border-bottom: 2px solid #873131;
+  border-left: 2px solid #FFF;
 }
 
 #social-navigation {
@@ -852,6 +851,11 @@ Header Menu
         flex-flow: nowrap row;
     -ms-flex-pack: justify;
         justify-content: space-between;
+  }
+  #site-navigation ul li.current-menu-item {
+    padding-top: 2px;
+    border-bottom: 2px solid #FFF;
+    border-left: none;
   }
   #site-navigation ul li a {
     max-width: none;
