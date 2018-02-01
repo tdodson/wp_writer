@@ -809,6 +809,10 @@ Header Menu
 #site-navigation ul li a:hover, #site-navigation ul li a:focus {
   background: #404040;
 }
+#site-navigation ul li.current-menu-item {
+  padding-top: 2px;
+  border-bottom: 2px solid #873131;
+}
 
 #social-navigation {
   flex: 1;
