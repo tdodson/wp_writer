@@ -9,6 +9,7 @@ textarea {
 	@include font-size(0.9);
 	line-height: $font__line-height-body;
 	font-variant-numeric: oldstyle-nums;
+	text-rendering: optimizeLegibility;
 	
 	// Rules that apply to phones and everything larger require no queries.
 

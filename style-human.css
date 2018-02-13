@@ -270,6 +270,7 @@ textarea {
   font-size: 0.9rem;
   line-height: 1.5;
   font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
 }
 @media (min-width: 768px) {
   body,
