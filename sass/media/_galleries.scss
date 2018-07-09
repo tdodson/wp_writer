@@ -127,59 +127,64 @@
     }
 }
 
-.stories figure figcaption,
-.stories figure figcaption > a {
-   
-}
-
 /** Story Effect **/
-figure.effect-story {
-    background: #030c17;
-    img {
-
+@supports (grid-area: auto) {  
+    .stories-gallery {
+        display: grid;
+        grid-column: 1;
+        grid-gap: 1em;
     }
-    h2 {
-       
-    }
-    p {
-
-    }
-    &:hover h2 {
-
-    }
-    figcaption {
-        p {
+    .effect-story {
+        background: #030c17;
+        display: grid;
+        img, figcaption {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        figcaption {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                transition: opacity 0.75s, transform 0.75s;
+                background-color:rgba(0,0,0,0.6);
+            }
             font-family: $font__sans;
         }
+        p {
+            text-align: center;
+        }
     }
-}
 
-figure.effect-story:hover figcaption::before,
-figure.effect-story:hover p {
-
-}
-
-figure.effect-story:hover figcaption {
-
-}
-
-figure.effect-story:hover img {
-
-}
-
-
-@supports (grid-area: auto) {
     @media screen and (min-width: $query__small) {
-    	.effect-story {
+    	.stories-gallery {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+            max-width: 956px;
+        }
+
+        .stories {
+            min-width: 470px;
+        }
+
+        .effect-story {
             display: grid;
             img, figcaption {
                 grid-column: 1;
                 grid-row: 1;
             }
+            img {
+                width: 470px;
+                height: 360px;
+            }
             figcaption {
                 display: flex;
-                align-items: center;
                 flex-wrap: wrap;
+                align-items: center;
                 justify-content: center;
                 flex-direction: column;
             }
@@ -187,29 +192,5 @@ figure.effect-story:hover img {
                 text-align: center;
             }
         }
-
-        .stories-gallery {
-    		display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 1em;
-            max-width: 956px;
-
-            .stories {
-                min-width: 470px;
-
-    			figure {
-    				img {
-    					width: 470px;
-    					height: 360px;
-    				}
-                    figcaption {
-                    }
-                    p {
-                        padding: 0;
-                    }
-
-    			}
-    		}
-    	}
     }
 }
