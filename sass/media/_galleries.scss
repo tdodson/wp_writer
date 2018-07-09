@@ -170,8 +170,22 @@ figure.effect-story:hover img {
 
 @supports (grid-area: auto) {
     @media screen and (min-width: $query__small) {
-    	figure.effect-story {
-            height: 100%;
+    	.effect-story {
+            display: grid;
+            img, figcaption {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            figcaption {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+            }
+            p {
+                text-align: center;
+            }
         }
 
         .stories-gallery {
