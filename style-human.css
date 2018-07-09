@@ -1635,18 +1635,18 @@ figure.effect-story:hover img {
   opacity: 0.4;
 }
 
-@media screen and (min-width: 768px) {
-  .stories-gallery {
-    margin: 0 auto;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .stories-gallery .stories figure img {
-    width: 470px;
-    height: 360px;
+@supports (grid-area: auto) {
+  @media screen and (min-width: 768px) {
+    .stories-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .stories-gallery .stories {
+      min-width: 470px;
+    }
+    .stories-gallery .stories figure img {
+      width: 470px;
+      height: 360px;
+    }
   }
 }

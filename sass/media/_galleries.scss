@@ -209,21 +209,22 @@ figure.effect-story:hover img {
     opacity: 0.4;
 }
 
-@media screen and (min-width: $query__small) {
-	.stories-gallery {
-		margin: 0 auto;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		.stories {
-			figure {
-				img {
-					width: 470px;
-					height: 360px;
 
-				}
+@supports (grid-area: auto) {
+    @media screen and (min-width: $query__small) {
+    	.stories-gallery {
+    		display: grid;
+            grid-template-columns: 1fr 1fr;
+    		.stories {
+                min-width: 470px;
+    			figure {
+    				img {
+    					width: 470px;
+    					height: 360px;
+    				}
 
-			}
-		}
-	}
+    			}
+    		}
+    	}
+    }
 }
