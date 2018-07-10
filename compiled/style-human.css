@@ -1592,13 +1592,12 @@ img#portrait {
   }
   @media screen and (min-width: 500px) {
     .stories-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      grid-template-columns: 10% 90% 10%;
+      grid-row-gap: 1em;
     }
 
     .stories {
-      padding-bottom: 1em;
+      grid-column: 2;
     }
   }
   @media screen and (min-width: 768px) {
@@ -1608,7 +1607,7 @@ img#portrait {
     }
 
     .stories {
-      padding-bottom: 0;
+      grid-column: auto;
     }
   }
   @media screen and (min-width: 992px) {
