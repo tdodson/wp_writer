@@ -148,12 +148,17 @@
             justify-content: center;
             flex-direction: column;
             opacity: 0;
-            &:hover {
+            font-family: $font__sans;
+            &.text-on {
                 opacity: 1;
                 transition: opacity 0.75s, transform 0.75s;
                 background-color:rgba(0,0,0,0.6);
             }
-            font-family: $font__sans;
+            &.text-off {
+                opacity: 0;
+                transition: opacity 0.75s, transform 0.75s;
+                background-color: none;
+            }  
         }
         p {
             text-align: center;
