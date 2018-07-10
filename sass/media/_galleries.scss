@@ -152,7 +152,7 @@
             grid-row: 1;
         }
         figcaption {
-             transition: opacity 1.5s, transform 1.5s;
+             transition: all 1.5s;
              background-color: none;
         }
         p {
@@ -160,7 +160,7 @@
         }
         &:hover figcaption, &:focus figcaption {
             opacity: 1;
-            transition: opacity 0.75s, transform 0.75s;
+            transition: all 0.75s;
             background-color:rgba(0,0,0,0.6);
         } 
     }
