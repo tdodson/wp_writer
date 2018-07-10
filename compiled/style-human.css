@@ -1544,6 +1544,17 @@ img#portrait {
     grid-gap: 1em;
   }
 
+  figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    opacity: 0;
+  }
+
   .effect-story {
     background: #030c17;
     display: grid;
@@ -1553,26 +1564,15 @@ img#portrait {
     grid-row: 1;
   }
   .effect-story figcaption {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
-    font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  }
-  .effect-story figcaption.text-on {
-    opacity: 1;
-    transition: opacity 0.75s, transform 0.75s;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  .effect-story figcaption.text-off {
-    opacity: 0;
-    transition: opacity 0.75s, transform 0.75s;
-    background-color: none;
+    transition: opacity 1.5s, transform 1.5s;
   }
   .effect-story p {
     text-align: center;
+  }
+  .effect-story:hover figcaption {
+    opacity: 1;
+    transition: opacity 0.75s, transform 0.75s;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   @media screen and (min-width: 768px) {
