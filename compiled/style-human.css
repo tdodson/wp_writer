@@ -1565,11 +1565,12 @@ img#portrait {
   }
   .effect-story figcaption {
     transition: opacity 1.5s, transform 1.5s;
+    background-color: none;
   }
   .effect-story p {
     text-align: center;
   }
-  .effect-story:hover figcaption {
+  .effect-story:hover figcaption, .effect-story:focus figcaption {
     opacity: 1;
     transition: opacity 0.75s, transform 0.75s;
     background-color: rgba(0, 0, 0, 0.6);
