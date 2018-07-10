@@ -109,13 +109,13 @@
         figcaption {
                 color: #fff;
                 padding: 1.5em; 
-                font-size: 1em; // mobile size
+                font-size: 0.85em; // mobile size
                 line-height: 125%; // mobile size
         }
         h2 {
             margin: 0;
             line-height: 125%; // mobile size
-            font-size: 25px; // mobile size
+            font-size: 17px; // mobile size
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -152,9 +152,15 @@
             grid-row: 1;
         }
         figcaption {
-             transition: all 1.5s;
-             background-color: none;
+            transition: all 1.5s;
+            background-color: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
+
         p {
             text-align: center;
         }
@@ -165,36 +171,48 @@
         } 
     }
 
+    @media screen and (min-width: 415px) {
+        .stories figure h2 {
+            font-size: 25px;
+        }
+        
+        .stories figure figcaption {
+            font-size: 1em;
+        }
+
+    }
+
+    @media screen and (min-width: 500px) {
+        .stories-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .stories {
+            padding-bottom: 1em;
+        }
+    }
+
     @media screen and (min-width: $query__small) {
     	.stories-gallery {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 1em;
-            max-width: 956px;
-        }
-
-        .stories {
-            min-width: 470px;
-        }
-
-        .effect-story {
             display: grid;
-            img, figcaption {
-                grid-column: 1;
-                grid-row: 1;
-            }
-            img {
-                width: 470px;
-                height: 360px;
-            }
-            figcaption {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-            p {
-                text-align: center;
+            grid-template-columns: 1fr 1fr;
+        }
+        .stories {
+            padding-bottom: 0;
+        }   
+    }
+
+
+    @media screen and (min-width: $query__medium) {
+        .stories-gallery {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .stories {
+            figure {
+                figcaption {
+                    padding: 0.2em;
+                }
             }
         }
     }
