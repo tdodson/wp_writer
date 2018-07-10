@@ -1583,10 +1583,15 @@ img#portrait {
     opacity: 0;
     font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   }
-  .effect-story figcaption:hover {
+  .effect-story figcaption.text-on {
     opacity: 1;
     transition: opacity 0.75s, transform 0.75s;
     background-color: rgba(0, 0, 0, 0.6);
+  }
+  .effect-story figcaption.text-off {
+    opacity: 0;
+    transition: opacity 0.75s, transform 0.75s;
+    background-color: none;
   }
   .effect-story p {
     text-align: center;
