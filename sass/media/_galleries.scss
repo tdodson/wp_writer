@@ -131,18 +131,7 @@
 @supports (grid-area: auto) {  
     .stories-gallery {
         display: grid;
-        grid-column: 1;
         grid-gap: 1em;
-    }
-    figcaption {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        opacity: 0;
-        font-family: $font__sans;
-        opacity: 0;
     }
     .effect-story {
         background: #030c17;
@@ -153,14 +142,15 @@
         }
         figcaption {
             transition: all 1.5s;
-            background-color: none;
+            background-color: transparent;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            opacity: 0;
+            font-family: $font__sans;
         }
-
         p {
             text-align: center;
         }
@@ -182,9 +172,9 @@
 
     }
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 520px) {
         .stories-gallery {
-            grid-template-columns: 10% 90% 10%;
+            grid-template-columns: 1fr 470px 1fr;
             grid-row-gap: 1em;
         }
         .stories {
@@ -203,16 +193,45 @@
     }
 
 
-    @media screen and (min-width: $query__medium) {
+    @media screen and (min-width: 1095px) {
         .stories-gallery {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
         .stories {
             figure {
                 figcaption {
                     padding: 0.2em;
+                    h2 {
+                        font-size: 17px;
+                    }
+                    p {
+                        font-size: 0.85em;
+                    }
                 }
             }
+            
+        }
+        .double {
+            grid-column: span 2;
+            grid-row: span 2;
+            max-width: 500px;
+            figure {
+                img {
+                    width: 500px;
+                    height: 380px;
+                }
+                figcaption {
+                    h2 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        .fourth-col {
+            grid-column: 4;
         }
     }
 }

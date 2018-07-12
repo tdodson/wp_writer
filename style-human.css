@@ -1557,24 +1557,7 @@ img#portrait {
 @supports (grid-area: auto) {
   .stories-gallery {
     display: grid;
-    grid-column: 1;
     grid-gap: 1em;
-  }
-
-  figcaption {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    opacity: 0;
-    font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-    opacity: 0;
   }
 
   .effect-story {
@@ -1587,7 +1570,7 @@ img#portrait {
   }
   .effect-story figcaption {
     transition: all 1.5s;
-    background-color: none;
+    background-color: transparent;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -1598,6 +1581,8 @@ img#portrait {
         justify-content: center;
     -ms-flex-direction: column;
         flex-direction: column;
+    opacity: 0;
+    font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   }
   .effect-story p {
     text-align: center;
@@ -1617,9 +1602,9 @@ img#portrait {
       font-size: 1em;
     }
   }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 520px) {
     .stories-gallery {
-      grid-template-columns: 10% 90% 10%;
+      grid-template-columns: 1fr 470px 1fr;
       grid-row-gap: 1em;
     }
 
@@ -1637,13 +1622,39 @@ img#portrait {
       grid-column: auto;
     }
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1095px) {
     .stories-gallery {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .stories figure figcaption {
       padding: 0.2em;
+    }
+    .stories figure figcaption h2 {
+      font-size: 17px;
+    }
+    .stories figure figcaption p {
+      font-size: 0.85em;
+    }
+
+    .double {
+      grid-column: span 2;
+      grid-row: span 2;
+      max-width: 500px;
+    }
+    .double figure img {
+      width: 500px;
+      height: 380px;
+    }
+    .double figure figcaption h2 {
+      font-size: 25px;
+    }
+    .double figure figcaption p {
+      font-size: 1em;
+    }
+
+    .fourth-col {
+      grid-column: 4;
     }
   }
 }
