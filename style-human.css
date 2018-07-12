@@ -1530,96 +1530,100 @@ img#portrait {
 
 .stories {
   max-width: 470px;
+  position: relative;
+  margin: 0 auto;
 }
 .stories a {
   text-decoration: none;
 }
-.stories figure figcaption {
+.stories figcaption {
+  position: absolute;
+  z-index: 10;
+  top: 34%;
   color: #fff;
   padding: 1.5em;
   font-size: 0.85em;
   line-height: 125%;
+  width: 100%;
+  text-align: center;
 }
-.stories figure h2 {
+.stories h2 {
   margin: 0;
   line-height: 125%;
   font-size: 17px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1em;
 }
-.stories figure p {
+.stories p {
   margin: 0;
   padding: 0 1em 0.5em 1em;
+  display: none;
 }
 
+@media screen and (min-width: 415px) {
+  .stories figure h2 {
+    font-size: 25px;
+  }
+
+  .stories figure figcaption {
+    font-size: 1em;
+  }
+}
 /** Story Effect **/
 @supports (grid-area: auto) {
-  .stories-gallery {
-    display: grid;
-    grid-gap: 1em;
-  }
-
-  .effect-story {
-    background: #030c17;
-    display: grid;
-  }
-  .effect-story img, .effect-story figcaption {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .effect-story figcaption {
-    transition: all 1.5s;
-    background-color: transparent;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    opacity: 0;
-    font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  }
-  .effect-story p {
-    text-align: center;
-  }
-  .effect-story:hover figcaption, .effect-story:focus figcaption {
-    opacity: 1;
-    transition: all 0.75s;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-
-  @media screen and (min-width: 415px) {
-    .stories figure h2 {
-      font-size: 25px;
-    }
-
-    .stories figure figcaption {
-      font-size: 1em;
-    }
-  }
-  @media screen and (min-width: 520px) {
-    .stories-gallery {
-      grid-template-columns: 1fr 470px 1fr;
-      grid-row-gap: 1em;
-    }
-
-    .stories {
-      grid-column: 2;
-    }
-  }
   @media screen and (min-width: 768px) {
     .stories-gallery {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
     }
 
     .stories {
-      grid-column: auto;
+      margin: 0;
+    }
+
+    .effect-story {
+      background: #030c17;
+      display: grid;
+    }
+    .effect-story img, .effect-story figcaption {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .effect-story h2 {
+      background-color: transparent;
+      padding: 0;
+    }
+    .effect-story figcaption {
+      position: static;
+      transition: all 1.5s;
+      background-color: transparent;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      opacity: 0;
+      font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+      top: 0;
+      right: 0;
+    }
+    .effect-story figcaption p {
+      text-align: center;
+      display: block;
+    }
+    .effect-story:hover figcaption, .effect-story:focus figcaption {
+      opacity: 1;
+      transition: all 0.75s;
+      background-color: rgba(0, 0, 0, 0.6);
     }
   }
   @media screen and (min-width: 1095px) {
