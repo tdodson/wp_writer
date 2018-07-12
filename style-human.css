@@ -1556,6 +1556,7 @@ img#portrait {
   letter-spacing: 1px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1em;
+  border-radius: 1em;
 }
 .stories p {
   margin: 0;
@@ -1596,6 +1597,7 @@ img#portrait {
     .effect-story h2 {
       background-color: transparent;
       padding: 0;
+      border-radius: 0;
     }
     .effect-story figcaption {
       position: static;
